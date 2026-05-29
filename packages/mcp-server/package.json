@@ -1,0 +1,62 @@
+{
+  "name": "@regista11/mcp-server",
+  "version": "0.1.0",
+  "description": "Model Context Protocol server for Regista 11 — exposes 4 tools + 2 resources so any MCP-capable agent reads prop-market state and submits gasless USDT0 stakes on X Layer 196.",
+  "license": "MIT",
+  "author": "Regista 11 (winsznx)",
+  "homepage": "https://regista11.xyz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winsznx/theeleven.git",
+    "directory": "packages/mcp-server"
+  },
+  "bugs": {
+    "url": "https://github.com/winsznx/theeleven/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "x402",
+    "x-layer",
+    "usdt0",
+    "eip-3009",
+    "prediction-markets",
+    "agent",
+    "regista11"
+  ],
+  "type": "module",
+  "bin": {
+    "regista11-mcp": "./dist/server.js"
+  },
+  "main": "./dist/server.js",
+  "types": "./dist/server.d.ts",
+  "files": [
+    "dist",
+    "skill.md",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "dev": "tsx server.ts",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "prepublishOnly": "pnpm build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@regista11/x402-facilitator": "workspace:^",
+    "viem": "^2.50.4",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.22.3",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
