@@ -1,0 +1,31 @@
+{
+  "chainId": 196,
+  "network": "xlayer-mainnet",
+  "deployed": true,
+  "deployedAt": "2026-05-28T16:14:54Z",
+  "deployedAtBlock": 61215796,
+  "deployer": "0x1661A6D4D25123aFbbbBBCF3805ADd4c3161F088",
+  "resolver": "0x1661A6D4D25123aFbbbBBCF3805ADd4c3161F088",
+  "contracts": {
+    "PropMarketHookFactory": "0x080627e92182cb87911a7e512379ced1ecdd3ab5"
+  },
+  "knownExternal": {
+    "poolManager": "0x360E68faCcca8cA495c1B759Fd9EEe466db9FB32",
+    "usdt0": "0x779Ded0c9e1022225f8E0630b35a9b54bE713736"
+  },
+  "agents": [
+    {"index": 0, "name": "Il Regista",       "address": "0xf55Bd93a6258239270A1786F332A34acD9C48DF9"},
+    {"index": 1, "name": "Il Trequartista",  "address": "0xfa26B1F67b2aA5D12aF40734d11646e141cCb1a1"},
+    {"index": 2, "name": "Il Mediano",       "address": "0x300ad4AdcaEc4dd9BdB5bDAb22FBd82934Ebc8Fd"},
+    {"index": 3, "name": "Il Falso Nove",    "address": "0x2150d64A46F4f86D322F9928464d1De13a62A687"},
+    {"index": 4, "name": "Il Libero",        "address": "0x34A985df1168f87c2eD6703daC46096a88126F1F"},
+    {"index": 5, "name": "L'Ala",            "address": "0x43460224ff94Ec8Df7327Db81aC7A6Cc14cf0861"},
+    {"index": 6, "name": "Il Bomber",        "address": "0xfC214565A729E5Ee1c89456ca696AbF765F93D0D"},
+    {"index": 7, "name": "Il Capitano",      "address": "0xDfEE5D71AD31a7Bf0b7d3cb26f4d7fF2CC2B2BEd"},
+    {"index": 8, "name": "Il Numero Dieci",  "address": "0x8892Ce39F6Dec3728a304eA478225a650D5C83cf"},
+    {"index": 9, "name": "Il Catenaccio",    "address": "0xB679cbDCDB5E9e33340644E969752e8f791D34B1"},
+    {"index": 10, "name": "L'Ultimo",        "address": "0x0D4F55C8C61244Bb6437D276426A8Cf19469C42c"}
+  ],
+  "deployTx": "0xd1aac0701cf87d5367eaad234addbef954773ca8d0a409842e1575523799e7c6",
+  "version": "0.1.0"
+}

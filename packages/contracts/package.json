@@ -1,0 +1,19 @@
+{
+  "name": "@regista11/contracts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Regista 11 smart contracts (PropMarketHook + PropMarketHookFactory)",
+  "scripts": {
+    "build": "forge build",
+    "test": "forge test -vvv",
+    "mine": "forge script script/MineSalt.s.sol:MineSalt --sig 'run()'",
+    "agents": "tsx script/derive-agents.ts",
+    "preflight": "forge script script/PreDeployCheck.s.sol --rpc-url ${XLAYER_RPC}",
+    "deploy": "forge script script/Deploy.s.sol --rpc-url ${XLAYER_RPC} --broadcast --verify --verifier blockscout --verifier-url ${OKLINK_VERIFIER_URL:-https://www.oklink.com/api/v5/explorer/contract} --etherscan-api-key dummy -vvv",
+    "lint": "forge fmt --check"
+  },
+  "devDependencies": {
+    "tsx": "^4.22.3",
+    "viem": "^2.50.4"
+  }
+}
