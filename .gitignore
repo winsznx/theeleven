@@ -1,0 +1,40 @@
+# Internal strategic docs — never commit. PRDs, submission notes,
+# demo scripts, judge-targeting copy, operator runbooks live here.
+/internal/
+
+.env
+.env.*
+!.env.example
+
+node_modules/
+dist/
+.turbo/
+.next/
+
+cache/
+out/
+broadcast/
+# Foundry library submodules only — anchored so the rule doesn't match
+# packages/web/src/lib/ or any other "lib" directory in the tree.
+/packages/contracts/lib/
+
+packages/contracts/.cache/
+packages/contracts/lcov.info
+
+*.log
+.DS_Store
+
+# build artifacts
+*.tsbuildinfo
+
+# local databases (agent SQLite, etc.)
+*.db
+*.db-journal
+*.sqlite
+*.sqlite-journal
+
+# key material — never commit, defensive
+*.key
+*.pem
+keystore/
+mnemonic*
