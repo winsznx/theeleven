@@ -1,0 +1,61 @@
+{
+  "name": "@regista11/x402-facilitator",
+  "version": "0.1.1",
+  "description": "X Layer EIP-3009 gasless settlement facilitator. Relays USDT0 transferWithAuthorization signatures, pays OKB gas. Built for Regista 11 — works for any X Layer dApp.",
+  "license": "MIT",
+  "author": "Regista 11 (winsznx)",
+  "homepage": "https://regista11.xyz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winsznx/theeleven.git",
+    "directory": "packages/x402-facilitator"
+  },
+  "bugs": {
+    "url": "https://github.com/winsznx/theeleven/issues"
+  },
+  "keywords": [
+    "x402",
+    "eip-3009",
+    "gasless",
+    "x-layer",
+    "usdt0",
+    "facilitator",
+    "transferwithauthorization",
+    "okx",
+    "stablecoin"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "prepublishOnly": "pnpm build"
+  },
+  "dependencies": {
+    "viem": "^2.50.4"
+  },
+  "peerDependencies": {
+    "viem": ">=2.30.0 <3"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

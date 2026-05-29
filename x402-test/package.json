@@ -1,0 +1,23 @@
+{
+  "name": "x402-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "tsx server.ts",
+    "client": "tsx client.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@okxweb3/x402-core": "^0.1.0",
+    "@okxweb3/x402-evm": "^0.1.0",
+    "@okxweb3/x402-express": "^0.1.0",
+    "express": "^5.2.1",
+    "tsx": "^4.22.3",
+    "viem": "^2.50.4"
+  }
+}
