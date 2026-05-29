@@ -1,0 +1,125 @@
+{
+  "fixture": {
+    "get": "fixtures",
+    "parameters": { "id": "1145546" },
+    "errors": [],
+    "results": 1,
+    "response": [
+      {
+        "fixture": {
+          "id": 1145546,
+          "referee": "M. Oliver",
+          "timezone": "UTC",
+          "date": "2026-05-27T19:00:00+00:00",
+          "timestamp": 1779051600,
+          "status": { "long": "Match Finished", "short": "FT", "elapsed": 90, "extra": 4 }
+        },
+        "teams": {
+          "home": { "id": 100, "name": "Home FC", "logo": null, "winner": true },
+          "away": { "id": 200, "name": "Away FC", "logo": null, "winner": false }
+        },
+        "goals": { "home": 2, "away": 1 },
+        "score": {
+          "halftime":  { "home": 1, "away": 0 },
+          "fulltime":  { "home": 2, "away": 1 },
+          "extratime": { "home": null, "away": null },
+          "penalty":   { "home": null, "away": null }
+        },
+        "events": [
+          {
+            "time": { "elapsed": 12, "extra": null },
+            "team": { "id": 100, "name": "Home FC", "logo": null },
+            "player": { "id": 9001, "name": "Striker A" },
+            "assist": { "id": 9002, "name": "Winger A" },
+            "type": "Goal", "detail": "Normal Goal", "comments": null
+          },
+          {
+            "time": { "elapsed": 34, "extra": null },
+            "team": { "id": 200, "name": "Away FC", "logo": null },
+            "player": { "id": 7001, "name": "Midfielder B" },
+            "assist": { "id": null, "name": null },
+            "type": "Card", "detail": "Yellow Card", "comments": null
+          },
+          {
+            "time": { "elapsed": 58, "extra": null },
+            "team": { "id": 200, "name": "Away FC", "logo": null },
+            "player": { "id": 7002, "name": "Striker B" },
+            "assist": { "id": null, "name": null },
+            "type": "Goal", "detail": "Normal Goal", "comments": null
+          },
+          {
+            "time": { "elapsed": 67, "extra": null },
+            "team": { "id": 100, "name": "Home FC", "logo": null },
+            "player": { "id": 9003, "name": "Substitute A" },
+            "assist": { "id": 9001, "name": "Striker A" },
+            "type": "subst", "detail": "Substitution 1", "comments": null
+          },
+          {
+            "time": { "elapsed": 78, "extra": null },
+            "team": { "id": 100, "name": "Home FC", "logo": null },
+            "player": { "id": 9004, "name": "Forward A" },
+            "assist": { "id": 9003, "name": "Substitute A" },
+            "type": "Goal", "detail": "Normal Goal", "comments": null
+          },
+          {
+            "time": { "elapsed": 89, "extra": null },
+            "team": { "id": 200, "name": "Away FC", "logo": null },
+            "player": { "id": 7003, "name": "Defender B" },
+            "assist": { "id": null, "name": null },
+            "type": "Card", "detail": "Red Card", "comments": null
+          }
+        ]
+      }
+    ]
+  },
+  "statistics": {
+    "get": "fixtures/statistics",
+    "parameters": { "fixture": "1145546" },
+    "errors": [],
+    "results": 2,
+    "response": [
+      {
+        "team": { "id": 100, "name": "Home FC", "logo": null },
+        "statistics": [
+          { "type": "Shots on Goal",    "value": 8 },
+          { "type": "Shots off Goal",   "value": 5 },
+          { "type": "Shots insidebox",  "value": 10 },
+          { "type": "Shots outsidebox", "value": 3 },
+          { "type": "Total Shots",      "value": 13 },
+          { "type": "Blocked Shots",    "value": 1 },
+          { "type": "Fouls",            "value": 9 },
+          { "type": "Corner Kicks",     "value": 7 },
+          { "type": "Offsides",         "value": 2 },
+          { "type": "Ball Possession",  "value": "57%" },
+          { "type": "Yellow Cards",     "value": 1 },
+          { "type": "Red Cards",        "value": 0 },
+          { "type": "Goalkeeper Saves", "value": 3 },
+          { "type": "Total passes",     "value": 520 },
+          { "type": "Passes accurate",  "value": 445 },
+          { "type": "Passes %",         "value": "86%" }
+        ]
+      },
+      {
+        "team": { "id": 200, "name": "Away FC", "logo": null },
+        "statistics": [
+          { "type": "Shots on Goal",    "value": 4 },
+          { "type": "Shots off Goal",   "value": 4 },
+          { "type": "Shots insidebox",  "value": 5 },
+          { "type": "Shots outsidebox", "value": 3 },
+          { "type": "Total Shots",      "value": 8 },
+          { "type": "Blocked Shots",    "value": 1 },
+          { "type": "Fouls",            "value": 12 },
+          { "type": "Corner Kicks",     "value": 3 },
+          { "type": "Offsides",         "value": 1 },
+          { "type": "Ball Possession",  "value": "43%" },
+          { "type": "Yellow Cards",     "value": 3 },
+          { "type": "Red Cards",        "value": 1 },
+          { "type": "Goalkeeper Saves", "value": 6 },
+          { "type": "Total passes",     "value": 390 },
+          { "type": "Passes accurate",  "value": 300 },
+          { "type": "Passes %",         "value": "77%" }
+        ]
+      }
+    ]
+  }
+}

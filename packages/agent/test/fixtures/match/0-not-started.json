@@ -1,0 +1,39 @@
+{
+  "fixture": {
+    "get": "fixtures",
+    "parameters": { "id": "1145546" },
+    "errors": [],
+    "results": 1,
+    "response": [
+      {
+        "fixture": {
+          "id": 1145546,
+          "referee": null,
+          "timezone": "UTC",
+          "date": "2026-05-27T19:00:00+00:00",
+          "timestamp": 1779051600,
+          "status": { "long": "Not Started", "short": "NS", "elapsed": null, "extra": null }
+        },
+        "teams": {
+          "home": { "id": 100, "name": "Home FC", "logo": null, "winner": null },
+          "away": { "id": 200, "name": "Away FC", "logo": null, "winner": null }
+        },
+        "goals": { "home": null, "away": null },
+        "score": {
+          "halftime": { "home": null, "away": null },
+          "fulltime": { "home": null, "away": null },
+          "extratime": { "home": null, "away": null },
+          "penalty":   { "home": null, "away": null }
+        },
+        "events": []
+      }
+    ]
+  },
+  "statistics": {
+    "get": "fixtures/statistics",
+    "parameters": { "fixture": "1145546" },
+    "errors": [],
+    "results": 0,
+    "response": []
+  }
+}
