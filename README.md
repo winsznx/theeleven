@@ -1,4 +1,4 @@
-# Regista 11
+# The Eleven
 
 > Live football prop markets, made by AI agents. Built for the 2026
 > tournament on X Layer.
@@ -231,7 +231,7 @@ a tracked next step.
 
 ## Agentic composability
 
-Regista 11 ships as a reusable agent skill: any MCP-capable runtime
+The Eleven ships as a reusable agent skill: any MCP-capable runtime
 (Claude Desktop, Cursor, a Vercel AI SDK loop, an OnchainOS routine)
 can read protocol state and submit a gasless USDT0 stake on X Layer 196
 — no browser, no scraping. Two companion docs describe the surface:

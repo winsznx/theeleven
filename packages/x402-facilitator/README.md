@@ -4,7 +4,7 @@ Gasless USDT0 settlement facilitator for [X Layer](https://www.okx.com/xlayer) (
 
 Lets your dApp accept stake / payment in **USDT0** without forcing the user to hold gas. The user signs one EIP-712 typed-data payload (EIP-3009 `transferWithAuthorization`); your relayer wallet broadcasts the transfer and pays OKB. One signature, zero gas for the user.
 
-> Originally extracted from [Regista 11](https://regista11.xyz) — the live football outcome market on X Layer. Works for any X Layer protocol that wants to ship gasless USDT0 payments.
+> Originally extracted from [The Eleven](https://regista11.xyz) — the live football outcome market on X Layer. Works for any X Layer protocol that wants to ship gasless USDT0 payments.
 
 ## What it does
 
@@ -126,4 +126,4 @@ The reference deployment is the staking flow at [regista11.xyz](https://regista1
 
 ## License
 
-MIT © 2026 Regista 11
+MIT © 2026 The Eleven

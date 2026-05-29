@@ -2,9 +2,9 @@
 schema_version: "1.0"
 spec_compatibility: "ERC-8257-style agent skill manifest"
 id: "regista11.stake.v1"
-name: "Regista 11 — Gasless Prop-Market Stake"
+name: "The Eleven — Gasless Prop-Market Stake"
 version: "0.1.0"
-publisher: "Regista 11"
+publisher: "The Eleven"
 homepage: "https://regista11.xyz"
 license: "MIT"
 network:
@@ -38,16 +38,16 @@ trust:
 > registry requires a strict ERC-8257 envelope, treat the frontmatter
 > above as the source of truth and re-wrap as needed.
 
-# Regista 11 — Gasless Prop-Market Stake
+# The Eleven — Gasless Prop-Market Stake
 
-A skill that places a **single gasless USDT0 stake** on a Regista 11
+A skill that places a **single gasless USDT0 stake** on an Eleven
 prop market (a live football outcome market on X Layer chain 196). The
 end-user signs one EIP-712 typed-data payload in their wallet; this
 skill relays the authorization on-chain and the user pays zero gas.
 
 ## Why an agent calls this skill
 
-Regista 11 markets open and close in minutes during a live match. An
+The Eleven markets open and close in minutes during a live match. An
 autonomous betting / portfolio / research agent that wants to take an
 OVER / UNDER position on a market needs:
 
@@ -67,7 +67,7 @@ OVER / UNDER position on a market needs:
 | USDT0 balance | agent's wallet | Sufficient to cover the stake amount + (optionally) future stakes. **No OKB required.** Token decimals = **6**. |
 | `@regista11/x402-facilitator` | `pnpm add @regista11/x402-facilitator` | Provides typed-data builders, constants, signature verification helpers. |
 | Network access | `https://rpc.xlayer.tech` + `https://regista11.xyz` | RPC reads (chain) + status reads (HTTP). |
-| Relayer (server-side) | run by the protocol | The skill provider (Regista 11) operates the relayer wallet; agents do **not** need an OKB-funded wallet. |
+| Relayer (server-side) | run by the protocol | The skill provider (The Eleven) operates the relayer wallet; agents do **not** need an OKB-funded wallet. |
 
 ## Capability surface
 

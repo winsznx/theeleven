@@ -1,7 +1,7 @@
-# Regista 11 — OnchainOS Skill Integration
+# The Eleven — OnchainOS Skill Integration
 
 > How an autonomous agent running on an OnchainOS-style platform consumes
-> Regista 11 as a reusable skill. Manifest, registry discovery, MCP
+> The Eleven as a reusable skill. Manifest, registry discovery, MCP
 > bridge — all three layers, with the same contract addresses your
 > wallet will hit on X Layer 196.
 
@@ -15,10 +15,10 @@
 ## What it is
 
 This document describes how an external agent running on an
-**OnchainOS**-style platform mounts Regista 11 as a reusable skill,
+**OnchainOS**-style platform mounts The Eleven as a reusable skill,
 using the `skill.md` manifest at `packages/mcp-server/skill.md` as the
 canonical source of truth. The manifest declares one mainline
-capability — a single gasless **USDT0** stake on a Regista 11 prop
+capability — a single gasless **USDT0** stake on an Eleven prop
 market — plus three read-only helpers, anchored to the
 `PropMarketHookFactory` on **X Layer** chain 196 and signed with an
 **EIP-712** typed-data payload that becomes an EIP-3009
@@ -55,9 +55,9 @@ envelope.
 | `schema_version` | `"1.0"` | Manifest schema rev |
 | `spec_compatibility` | `"ERC-8257-style agent skill manifest"` | Compatibility, not certification |
 | `id` | `"regista11.stake.v1"` | Stable reverse-DNS-style skill id |
-| `name` | `"Regista 11 — Gasless Prop-Market Stake"` | Human-facing name |
+| `name` | `"The Eleven — Gasless Prop-Market Stake"` | Human-facing name |
 | `version` | `"0.1.0"` | Capability semver |
-| `publisher` | `"Regista 11"` | — |
+| `publisher` | `"The Eleven"` | — |
 | `homepage` | `"https://regista11.xyz"` | Live dApp |
 | `license` | `"MIT"` | — |
 
@@ -148,7 +148,7 @@ The full ERC-8257-style JSON schema for `submit_gasless_stake` lives in
 ## Moltbook Registration Info
 
 This section describes how the skill is **registry-ready for
-OnchainOS-compatible discovery layers** — Regista 11 does not assert a
+OnchainOS-compatible discovery layers** — The Eleven does not assert a
 specific Moltbook registry URL because the canonical Moltbook endpoint
 is not part of the artifacts we ship. Compatibility, not certification.
 
@@ -296,4 +296,4 @@ lives in [agent-integration.md → MCP Server Quickstart](./agent-integration.md
 
 ## License
 
-MIT · 2026 Regista 11.
+MIT · 2026 The Eleven.

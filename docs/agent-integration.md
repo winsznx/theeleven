@@ -1,8 +1,8 @@
-# Regista 11 — Agent Integration
+# The Eleven — Agent Integration
 
 > The framework-neutral surface. How any agent runtime — Claude
 > Desktop, Cursor, a Vercel AI SDK loop, a bespoke OnchainOS routine —
-> reads Regista 11 markets and submits gasless USDT0 stakes on X Layer
+> reads The Eleven markets and submits gasless USDT0 stakes on X Layer
 > 196 without touching a browser.
 
 [![ERC-8257-style](https://img.shields.io/badge/skill-ERC--8257--style-1a73e8?style=flat-square)](./agent-onchainos-integration.md)
@@ -14,7 +14,7 @@
 
 ## What it is
 
-Regista 11 ships an agentic composability layer on top of its
+The Eleven ships an agentic composability layer on top of its
 **PropMarketHook** factory at
 [`0x080627e92182cb87911a7e512379ced1ecdd3ab5`](https://www.oklink.com/x-layer/address/0x080627e92182cb87911a7e512379ced1ecdd3ab5),
 exposing the same read + write surface the web app uses to any
@@ -43,7 +43,7 @@ per-tool implementation map.
 
 ### What a prop market is (30-second primer)
 
-If you're arriving here cold: a Regista 11 prop market is a binary
+If you're arriving here cold: an Eleven prop market is a binary
 OVER/UNDER bet on an in-match statistic — "corners over 8.5",
 "shots on target over 4.5", and so on. The lifecycle, mirrored by the
 on-chain `status` enum, is:
@@ -231,9 +231,9 @@ consumers requiring a strict ERC-8257 envelope should treat the
 | `schema_version` | `"1.0"` |
 | `spec_compatibility` | `"ERC-8257-style agent skill manifest"` |
 | `id` | `"regista11.stake.v1"` |
-| `name` | `"Regista 11 — Gasless Prop-Market Stake"` |
+| `name` | `"The Eleven — Gasless Prop-Market Stake"` |
 | `version` | `"0.1.0"` |
-| `publisher` | `"Regista 11"` |
+| `publisher` | `"The Eleven"` |
 | `homepage` | `"https://regista11.xyz"` |
 | `license` | `"MIT"` |
 | `runtime.module` | `"@regista11/x402-facilitator"` |
@@ -380,4 +380,4 @@ live in
 
 ## License
 
-MIT · 2026 Regista 11.
+MIT · 2026 The Eleven.
