@@ -1,0 +1,69 @@
+generator client {
+  provider      = "prisma-client-js"
+  // Alpine 22 ships OpenSSL 3, but Prisma 5.22's default linux-musl
+  // binary links libssl 1.1. Explicitly request the OpenSSL-3 variant so
+  // the container can load libquery_engine on Railway's Alpine image.
+  binaryTargets = ["native", "debian-openssl-3.0.x", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Market {
+  id                  String    @id
+  hookAddress         String    @unique
+  agentIndex          Int
+  agentName           String
+  fixtureId           Int
+  matchId             String
+  propositionId       String
+  revealedParams      String
+  revealSalt          String
+  create2Salt         String
+  commitHash          String
+  marketDeadline      BigInt
+  resolveDeadline     BigInt
+
+  status              String
+  createdAt           DateTime  @default(now())
+  createdAtBlock      BigInt
+  createdTxHash       String
+
+  scheduledRevealAt   DateTime
+  revealAttemptedAt   DateTime?
+  revealedAt          DateTime?
+  revealTxHash        String?
+  revealError         String?
+
+  resolvedAt          DateTime?
+  resolveTxHash       String?
+  resolvedOutcome     Int?
+
+  @@index([fixtureId])
+  @@index([agentIndex])
+  @@index([status])
+  @@index([scheduledRevealAt])
+}
+
+model AgentActivity {
+  id           Int       @id @default(autoincrement())
+  agentIndex   Int
+  fixtureId    Int?
+  timestamp    DateTime  @default(now())
+  eventType    String
+  marketId     String?
+  metadata     String
+
+  @@index([agentIndex])
+  @@index([fixtureId])
+  @@index([timestamp])
+}
+
+model MatchSession {
+  fixtureId    Int       @id
+  startedAt    DateTime  @default(now())
+  endedAt      DateTime?
+  finalStatus  String?
+}

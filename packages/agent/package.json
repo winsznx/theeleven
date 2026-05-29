@@ -1,0 +1,37 @@
+{
+  "name": "@regista11/agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc -p tsconfig.json --noEmit",
+    "smoke": "tsx src/smoke.ts",
+    "match:watch": "tsx src/matches/cli-entry.ts",
+    "agent:start": "tsx src/core/cli-entry.ts",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev --name init",
+    "db:push": "prisma db push --skip-generate",
+    "db:reset": "prisma migrate reset --force",
+    "sync-abis": "tsx script/sync-abis.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "dotenv": "^16.4.5",
+    "pino": "^9.5.0",
+    "pino-pretty": "^11.3.0",
+    "viem": "^2.39.3",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "prisma": "^5.22.0",
+    "tsx": "^4.22.3",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.8"
+  }
+}
