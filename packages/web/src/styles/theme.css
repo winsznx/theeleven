@@ -1,0 +1,101 @@
+/* Column design tokens — verbatim from PRD §8.1. */
+/* Tailwind v4: a single @theme block is the source of truth; no tailwind.config.js. */
+
+@theme {
+  /* ---- §8.1.1 Brand ---- */
+  --color-deep-plum:        #111a4a;
+  --color-faded-grid-blue:  #023247;
+
+  /* ---- Action ---- */
+  --color-action-orange:    #ec652b;
+  --color-callout-cyan:     #167e6c;
+  --color-notification-teal:#88deeb;
+
+  /* ---- Neutrals ---- */
+  --color-code-black:       #000000;
+  --color-ink-blue:         #011821;
+  --color-graphite:         #121616;
+  --color-charcoal-text:    #232730;
+  --color-slate-text:       #7c7f88;
+  --color-steel-gray:       #e3e4e8;
+  --color-fog-gray:         #f6f6f8;
+  --color-ghost-white:      #ffffff;
+
+  /* ---- Semantic ---- */
+  --color-success-moss:     #44b48b;
+  --color-info-blue:        #7ea7e9;
+
+  /* ---- Pitch palette (P14, dark sub-block — scoped to tactical pitch only) ----
+     Lives alongside §8.1.1 Column tokens; do NOT use these outside the pitch. */
+  --color-pitch-bg:         #1a2e1a;
+  --color-pitch-fill:       #2e5c2a;
+  --color-pitch-line:       #ffffff;
+  --color-pitch-gold:       #e5b43a;
+  --color-pitch-azure:      #0066cc;
+  --color-pitch-shadow:     #0e1f0e;
+  --color-pitch-overlay:    #0f1a0f;
+
+  /* ---- §8.1.3 Spacing & shape ---- */
+  --spacing-section:        48px;
+  --spacing-element:        24px;
+  --radius-default:         8px;
+  --radius-chip:            2px;
+  --radius-featured:        12px;
+  --container-max:          1280px;
+
+  /* ---- §8.1.2 Typography ---- */
+  /* Inter is the active default; SuisseIntl 300/400/500/600 ships later as primary. */
+  --font-sans:              var(--font-inter), "SuisseIntl", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display:           var(--font-inter), "SuisseIntl", system-ui, -apple-system, sans-serif;
+  --font-mono:              "SFMono-Regular", "IBM Plex Mono", "Menlo", monospace;
+
+  --text-caption:           10px;
+  --text-caption--line-height: 1.5;
+
+  --text-body:              14px;
+  --text-body--line-height: 1.5;
+  --text-body--letter-spacing: -0.28px;
+
+  --text-subheading:        18px;
+  --text-subheading--line-height: 1.4;
+  --text-subheading--letter-spacing: -0.36px;
+
+  --text-heading-sm:        24px;
+  --text-heading-sm--line-height: 1.33;
+  --text-heading-sm--letter-spacing: -0.48px;
+
+  --text-heading:           40px;
+  --text-heading--line-height: 1.1;
+  --text-heading--letter-spacing: -0.8px;
+
+  --text-display:           48px;
+  --text-display--line-height: 1;
+  --text-display--letter-spacing: -1.44px;
+
+  /* ---- §8.1.4 Shadows ---- */
+  --shadow-card:
+      rgba(17, 26, 74, 0.05) 0px 0px 0px 1px,
+      rgba(0, 0, 0, 0.10)    0px 1px 2px 0px,
+      rgba(255, 255, 255, 0.50) 0px 0px 0px 1px inset;
+
+  --shadow-hover:
+      rgba(17, 26, 74, 0.10) 0px 1px 3px 0px,
+      rgba(17, 26, 74, 0.05) 0px 1px 0px 0px,
+      rgba(255, 255, 255, 0.50) 0px 1px 0px 0px inset,
+      rgba(255, 255, 255, 0.50) 0px 1px 4px 0px inset;
+
+  --shadow-elevated:
+      rgba(0, 0, 0, 0.02) 0px 40px 32px 0px,
+      rgba(0, 0, 0, 0.03) 0px 22px 18px 0px,
+      rgba(0, 0, 0, 0.03) 0px 12px 10px 0px,
+      rgba(0, 0, 0, 0.04) 0px  7px  5px 0px,
+      rgba(0, 0, 0, 0.07) 0px  3px  2px 0px;
+}
+
+/* ---- Gradients (reserved per §8.1.1 application rules; not promoted to tokens) ---- */
+:root {
+  --gradient-soft-horizon:
+      linear-gradient(125deg, #d65620 -3.16%, #9f7aee 14.55%, #4575cd 32.26%, #71d2f0 49.97%, #44b48b 67.68%, #f4df69 85.39%);
+  --gradient-radial-twilight:
+      radial-gradient(29.88% 184.91% at 6.55% -48.11%, #771c86 0%, #111a4a 100%);
+}

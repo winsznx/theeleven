@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@import "./theme.css";
+
+/* §8.1.5 Signature decorative — dot grid background, 24px pitch, barely-visible. */
+html, body {
+  background-color: var(--color-ghost-white);
+  color: var(--color-ink-blue);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--text-body--line-height);
+  letter-spacing: var(--text-body--letter-spacing);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* §8.1.5 Signature decorative dot grid. iOS Safari's combo of body
+   background-attachment: fixed + backdrop-filter elsewhere locks page
+   scroll on touch, so the pattern is painted onto a fixed pseudo-
+   element layered behind content instead of the body background. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(circle at 1px 1px, rgba(17, 26, 74, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+/* Focus ring — §8.9: 2px Action Orange ring, 2px offset, keyboard only. */
+:focus-visible {
+  outline: 2px solid var(--color-action-orange);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* §8.6 reduced motion — global guard. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mono numerals utility — Column rule: SFMono for all numerical data. */
+.font-numerals {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* P14 — marquee scroll for TxHashStrip. Pauses on hover. Disabled by the
+   §8.6 prefers-reduced-motion guard above. */
+@keyframes regista-marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+.regista-marquee {
+  animation: regista-marquee 30s linear infinite;
+  will-change: transform;
+}
+.regista-marquee:hover,
+.regista-marquee[data-paused="true"] {
+  animation-play-state: paused;
+}
+
+/* P15 — hex-corner card per PRD §8.1.5. Two notches at top-right and
+   bottom-left. Composed as an outer "border" div + inner "fill" div so the
+   1px steel-gray edge follows the polygon. */
+.hex-card {
+  --hex-notch: 6px;
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--hex-notch)) 0,
+    100% var(--hex-notch),
+    100% 100%,
+    var(--hex-notch) 100%,
+    0 calc(100% - var(--hex-notch))
+  );
+}
